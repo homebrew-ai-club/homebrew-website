@@ -16,8 +16,8 @@ export default function Home() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw"
         />
         <div className="absolute inset-0 z-20 flex items-end">
-          <div className="w-full h-[40%] flex flex-col items-center justify-center">
-            <p className="mb-3 md:max-w-[40vw] text-center">Homebrew is open to anyone who wants to build! Technical or non-technical, software or hardware.</p>
+          <div className="w-full h-[40%] flex flex-col items-center justify-center pt-6">
+            <p className="mb-3 md:max-w-[38vw] text-center">Homebrew is open to anyone who wants to build! Technical or non-technical, software or hardware.</p>
             <p>Join our community on <Link href="https://discord.gg/VeXD2c9tqW" className="font-bold">Discord</Link>.</p>
           </div>
         </div>
