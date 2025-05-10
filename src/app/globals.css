@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #32231c;
+  --foreground: #FFFCD8;
+  --accent: #FFEA00;
 }
 
 @theme inline {
@@ -12,11 +27,34 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.nonHomePage {
+  min-height: 93vh;
+}
+
+h1 {
+  font-family: 'Instrument Serif', serif;
+  color: var(--accent);
+  font-size: 65px;
+}
+h2 {
+  font-family: 'Instrument Serif', serif;
+  color: var(--accent);
+  font-size: 40px;
+}
+h3 {
+  font-family: 'Instrument Serif', serif;
+  color: var(--accent);
+  font-size: 25px;
+
+}
+
+p, li {
+  font-family: 'Geist Mono', monospace;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: underline;
 }
 
 body {
