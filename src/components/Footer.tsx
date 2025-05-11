@@ -19,7 +19,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col items-end gap-5">
                     <div className="flex flex-row items-end gap-5">
-                        <Link href="https://www.linkedin.com/company/homebrew-nu">
+                        <Link href="https://www.linkedin.com/company/homebrewnu/">
                             <Image
                                 src="/icons/linkedin.png"
                                 alt="linkedin icon"
