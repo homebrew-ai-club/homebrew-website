@@ -25,7 +25,7 @@ const Navbar = () => {
       {isHomePage ? (
         <div className="flex flex-row items-end min-h-[15vh] md:h-[12.5vh] px-4 md:px-6 py-4 md:py-0 justify-between">
           <div className="flex flex-col">
-            <h1 className="mb-[-10px] md:mb-[-15px] text-2xl md:text-3xl lg:text-4xl">homebrew</h1>
+            <h1 className="mb-[-10px] md:mb-[-10px] text-2xl md:text-3xl lg:text-4xl">homebrew</h1>
             <p className="text-sm md:text-base lg:text-lg whitespace-normal max-w-[80vw] md:max-w-none">northwestern's home for passionate builders</p>
           </div>
           <div className="hidden md:flex flex-row gap-8">
