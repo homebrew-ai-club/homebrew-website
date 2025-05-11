@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="relative h-[87.5vh] w-full overflow-hidden px-4 md:px-6 py-4 md:py-6">
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/100 to-transparent" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/100 via-black/71 to-transparent" />
         <Image
           src="/images/the_garage_sample_photo.jpg"
           alt="a club meeting"

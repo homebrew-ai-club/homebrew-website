@@ -36,7 +36,6 @@ export default function Footer() {
                             />
                         </Link>
                     </div>
-                    <p>Website made with 🤎 by the Homebrew team.</p>
                 </div>
             </div>
         </div>
