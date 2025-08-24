@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { NavLinks } from "./Navbar"
 
 export default function Footer() {
     return (
@@ -7,15 +8,8 @@ export default function Footer() {
             <hr />
             <div className="px-5 my-6 flex flex-row items-end justify-between">
                 <div className="flex flex-col">
-                    <h2>Want to Join Homebrew?</h2>
-                    <p className="mb-4 max-w-[60vw]">Tell us about yourself! This is an opportunity for us to get to know your interests, goals, and what you're passionate about building.</p>
-                    <p>
-                        <Link
-                            href="https://tally.so/r/mZggez"
-                        >
-                            Apply Now
-                        </Link>
-                    </p>
+                    <h3>Join Homebrew.</h3>
+                    <NavLinks />
                 </div>
                 <div className="flex flex-col items-end gap-5">
                     <div className="flex flex-row items-end gap-5">

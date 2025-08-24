@@ -1,26 +1,56 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
+
+
   return (
-    <div className="flex flex-col">
-      <div className="relative h-[87.5vh] w-full overflow-hidden px-4 md:px-6 py-4 md:py-6">
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/100 via-black/71 to-transparent" />
-        <Image
-          src="/images/the_garage_sample_photo.jpg"
-          alt="a club meeting"
-          width={1920}
-          height={1080}
-          priority
-          className="rounded-[20px] md:rounded-[40px] w-full h-full object-cover sepia"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw"
-        />
-        <div className="absolute inset-0 z-20 flex items-end">
-          <div className="w-full h-[40%] flex flex-col items-center justify-center pt-4 md:pt-6 px-4 md:px-0">
-            <p className="mb-3 text-sm md:text-base lg:text-lg text-center max-w-[90vw] md:max-w-[38vw]">Homebrew is open to anyone who wants to build! Technical or non-technical, software or hardware.</p>
-            <p className="text-sm md:text-base">Join our community on <Link href="https://discord.gg/VeXD2c9tqW" className="font-bold">Discord</Link>.</p>
-          </div>
+    <div>
+
+      <div className="min-h-[95vh] w-full flex flex-col md:grid md:grid-cols-7 md:grid-rows-6 px-0">
+        {/* Upper Left - Main Title */}
+        <div className="flex-1 md:row-span-4 md:col-span-5 p-4 md:p-8 border-r border-b border-black md:flex md:flex-col gap-4 items-center justify-center">
+          <p className="x0 text-wrap">
+            Homebrew <Image
+              src="/logo/logo.svg"
+              alt="homebrew logo"
+              width={60}
+              height={60}
+              className="inline-block mx-0 align-middle"
+            /> is NU's community of builders.
+          </p>
+          <p className="x1">
+            Homebrew is the club for Northwestern students who build projects and startups. We provide community, guidance, and resources to help members build what they believe in.
+          </p>
         </div>
+
+        {/* Upper Right - Empty (hidden on mobile) */}
+        <div className="hidden md:block md:row-span-4 md:col-span-2 p-8 border-b border-black flex items-center justify-center">
+        </div>
+
+
+        {/* Bottom Left - Description */}
+        <div className="flex-1 md:row-span-2 md:col-span-5 p-4 md:p-8 border-r border-b border-black md:flex md:items-center justify-center">
+          <p className="x1">
+            blah blah blah
+          </p>
+        </div>
+
+        {/* Bottom Right - Image */}
+        <div className="flex-1 md:row-span-2 md:col-span-2 md:border-b bg-gray-50 flex items-center justify-center">
+          <Image
+            src="/images/computer_in_field.png"
+            alt="computer in field"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
       </div>
     </div>
   );

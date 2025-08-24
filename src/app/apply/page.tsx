@@ -3,29 +3,21 @@ import Link from "next/link";
 export default function RecruitmentPage() {
     return (
         <div className="nonHomePage w-full px-6 md:px-[20vw] py-6 md:py-8">
-            <h1 className="mb-2 text-2xl md:text-3xl">Recruitment</h1>
+            <h1 className="mb-4 text-2xl md:text-3xl">Recruitment</h1>
 
-            <h2 className="text-xl md:text-2xl mt-6 mb-3">Who should join Homebrew?</h2>
+            <h2>Apply</h2>
+            <p className="mb-3">Recruitment is currently closed and will open in Fall 2025. In the meantime, fill out the <Link href="https://forms.gle/Bi3fj2hX7FLYiDGX9">Interest Form</Link> so you'll be notified when recruitment starts! </p>
 
-            <p className="mb-3">Homebrew is made for people who:</p>
+            <h2>FAQ</h2>
+            <h4>What does recruitment look like?</h4>
+            <p className="mb-3">After applying, you may be invited for an interview, where you'll talk about your experiences, interests, and motivations. If you pass the interview stage, you're in, provided you meet member standards.</p>
 
-            <ul className="list-decimal pl-6 md:pl-10 mb-6">
-                <li className="mb-2">
-                    Have a habit of building things (or want to develop that habit).
-                </li>
-                <li className="mb-2">
-                    Want to meet other builders.
-                </li>
-                <li className="mb-2">
-                    Enjoy food.
-                </li>
-            </ul>
+            <h4>What are member standards?</h4>
+            <p className="mb-3">Homebrew holds its members to standard of commitment. Members are expected to attend most weekly demo days, and demo (a casual presentation about your recent progress) at least three times per quarter. 
+                If you are actively building, this should be pretty easy! </p>
 
-            <p className="mb-6">If that sounds like you, feel free to <Link href="https://tally.so/r/mZggez">apply</Link>!</p>
-
-            <h2 className="text-xl md:text-2xl mt-8 mb-3">When do I apply?</h2>
-
-            <p>We review applications on a rolling basis throughout the quarter. Applications typically take less than a week to review. If you have an idea or project, you should <Link href="https://tally.so/r/mZggez">apply now</Link>!</p>
+            <h4>Will I get kicked out if I don't show up / demo?</h4>
+            <p>Yes! But no worries, we know people get busy, so just apply again the next quarter and we won't hold it against you.</p>
         </div>
     );
 }
