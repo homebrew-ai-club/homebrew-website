@@ -4,8 +4,7 @@ import { NavLinks } from "./Navbar"
 
 export default function Footer() {
     return (
-        <div>
-            <hr />
+        <div className="border-t border-black">
             <div className="px-5 my-6 flex flex-row items-end justify-between">
                 <div className="flex flex-col">
                     <h3>Join Homebrew.</h3>
@@ -13,7 +12,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col items-end gap-5">
                     <div className="flex flex-row items-end gap-5">
-                        <Link href="https://www.linkedin.com/company/homebrewnu/">
+                        <Link href="https://www.linkedin.com/company/homebrewnu/" target="_blank">
                             <Image
                                 src="/icons/linkedin.png"
                                 alt="linkedin icon"
@@ -21,7 +20,7 @@ export default function Footer() {
                                 height={30}
                             />
                         </Link>
-                        <Link href="https://www.instagram.com/homebrew.nu">
+                        <Link href="https://www.instagram.com/homebrew_nu/" target="_blank">
                             <Image
                                 src="/icons/instagram.png"
                                 alt="instagram icon"

@@ -5,27 +5,27 @@ export default function ExecPage() {
     const boardMembers = [
         {
             name: "Vira Vitiv",
-            description: "Prev exec board @ EPIC.",
+            description: "TRMNL4 x Meta Program Lead",
             major: "Econ + Psych + Data Science",
             link: "LinkedIn",
             url: "https://www.linkedin.com/in/vira-bohdana-vitiv-418956201/",
-            image: "/placeholder.jpg"
+            image: "/headshots/vira_headshot.jpeg"
         },
         {
             name: "Andrew Yuan",
-            description: "Product Design @ Tonal.",
+            description: "Product Design @ Tonal",
             major: "Computer Science + Design",
             link: "andrew-yuan.com",
             url: "https://andrew-yuan.com",
-            image: "/placeholder.jpg"
+            image: "/headshots/andrew_headshot.jpg"
         },
         {
             name: "Kaival Shah",
-            description: "CTO @ Appetize.",
+            description: "Research @ HAND ERC",
             major: "Computer Science + Math",
             link: "kaival.dev",
             url: "https://kaival.dev",
-            image: "/placeholder.jpg"
+            image: "/headshots/kaival_headshot.jpg"
         },
         {
             name: "Ryan Kang",
@@ -33,7 +33,15 @@ export default function ExecPage() {
             major: "Econ + HCI",
             link: "LinkedIn",
             url: "https://www.linkedin.com/in/ryan-kang-0b69831ba/",
-            image: "/placeholder.jpg"
+            image: "/headshots/ryan_kang_headshot.jpeg"
+        },
+        {
+            name: "Julia Li",
+            description: "Speaker & Creator",
+            major: "Computer Science",
+            link: "LinkedIn",
+            url: "https://www.linkedin.com/in/juliajiaqili/",
+            image: "/headshots/julia_li_headshot.jpeg"
         }
     ];
 
@@ -46,8 +54,12 @@ export default function ExecPage() {
                 {boardMembers.map((member, index) => (
                     <div key={index} className="flex flex-col items-center text-center p-6 border border-black">
                         <div className="w-48 h-48 relative mb-4 rounded-full overflow-hidden">
-                            {/* Placeholder for headshot */}
-                            <div className="w-full h-full bg-gray-300"></div>
+                            <Image
+                            src={member.image} alt="member headshot"
+                            fill
+                            className="object-cover object-center"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
                         </div>
                         <h3 className="text-xl mb-2">{member.name}</h3>
                         <p>{member.description}</p>

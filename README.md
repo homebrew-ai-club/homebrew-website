@@ -1,5 +1,3 @@
 # Homebrew AI Website
 
-Join the [mailing list](https://tally.so/r/wayylv)!
-
-Apply now [here](https://tally.so/r/mZggez)!
+Join the [mailing list](https://forms.gle/g38ineAsi7jV68uR8)!

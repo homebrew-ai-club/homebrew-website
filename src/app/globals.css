@@ -42,34 +42,34 @@
 
 .x1 {
   font-family: 'circular-std-book', serif;
-  font-size: 25px;
+  font-size: 24px;
 }
 
 
 h1 {
-  font-family: 'circular-std-med', serif;
+  font-family: 'circular-std-book', serif;
   font-size: 65px;
 }
 
 h2 {
-  font-family: 'circular-std-med', serif;
-  font-size: 40px;
+  font-family: 'circular-std-book', serif;
+  font-size: 42px;
 }
 
 h3 {
-  font-family: 'circular-std-med', serif;
+  font-family: 'circular-std-book', serif;
   font-size: 25px;
 }
 
 h4 {
   font-family: 'circular-std-med', serif;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 p,
 li {
   font-family: 'circular-std-book', monospace;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a {
@@ -80,8 +80,25 @@ a:hover {
   color: var(--accent)
 }
 
+button {
+  color: white;
+  text-decoration: none;
+  border: none;
+  background-color: var(--accent);
+  font-family: 'circular-std-med', monospace;
+  width: fit-content;
+}
+button:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
 .serif {
   font-family: 'Instrument Serif';
+}
+
+.medium {
+  font-family: 'circular-std-med';
 }
 
 .accent {
@@ -101,4 +118,37 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mobile responsive font sizes - 25% reduction */
+@media (max-width: 768px) {
+  .x0 {
+    font-size: 56.25px;
+  }
+
+  .x1 {
+    font-size: 18.75px;
+  }
+
+  h1 {
+    font-size: 48.75px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 18.75px;
+  }
+
+  h4 {
+    font-size: 17px;
+  }
+
+  p,
+  li {
+    font-size: 15px;
+  }
+
 }
