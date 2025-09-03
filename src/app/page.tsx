@@ -51,12 +51,12 @@ export default function Home() {
   const section3rows = 4;
 
   return (
-    <div className="flex flex-col">
-      <div className="min-h-[150vh] flex flex-col md:grid md:grid-cols-20 px-0">
+    <div className="flex flex-col w-[100vw]">
+      <div className="min-h-[150vh] w-full flex flex-col md:grid md:[grid-template-columns:repeat(20,minmax(0,1fr))] px-0">
         {/** Hidden left side */}
-        <div className={`hidden md:block md:row-span-${section1rows} md:col-span-${sideCols} border-b border-black`}></div>
+        <div className={`hidden md:block md:row-span-4 md:col-span-3 border-b border-black`}></div>
         {/** Central hero */}
-        <div className={`md:row-span-${section1rows} md:col-span-${mainCols} md:border-l md:border-r border-b border-black md:px-15 p-5 flex flex-col items-center justify-center`}>
+        <div className={`md:row-span-4 md:col-[span_14] md:border-l md:border-r border-b border-black md:px-12 p-5 flex flex-col items-center justify-center`}>
           <div className="flex flex-col gap-5">
             <h1 className="x0 text-wrap mt-8">
               Northwestern's home for ambitious builders.
@@ -79,11 +79,11 @@ export default function Home() {
           </div>
         </div>
         {/** Hidden right side */}
-        <div className={`hidden md:block md:row-span-${section1rows} md:col-span-${sideCols} border-b border-black`}></div>
+        <div className={`hidden md:block md:row-span-4 md:col-span-3 border-b border-black`}></div>
 
         {/** Hidden left side */}
-        <div className={`hidden md:block md:row-span-${section2rows} md:col-span-${sideCols} border-b border-black`}></div>
-        <div className={`md:row-span-${section2rows} md:col-span-${mainCols} md:border-l md:border-r border-b border-black md:px-15 p-5 md:gap-3 flex flex-col items-center justify-center`}>
+        <div className={`hidden md:block md:row-span-3 md:col-span-3 border-b border-black`}></div>
+        <div className={`md:row-span-3 md:col-[span_14] md:border-l md:border-r border-b border-black md:px-12 p-5 md:gap-3 flex flex-col items-center justify-center`}>
           <h1 className="w-full">What we do</h1>
           <p className="x1 mb-4 md:mb-5">
             Homebrew is a place for builders to commit to real progress and share it with others.
@@ -96,10 +96,10 @@ export default function Home() {
           </p>
         </div>
         {/** Hidden right side */}
-        <div className={`hidden md:block md:row-span-${section2rows} md:col-span-${sideCols} border-b border-black`}></div>
+        <div className={`hidden md:block md:row-span-3 md:col-span-3 border-b border-black`}></div>
 
         {/** Member Organizations Carousel */}
-        <div className={`flex flex-col md:col-span-20 md:row-span-${carouselRows} p-5 gap-6 justify-center items-center border-b border-black`}>
+        <div className={`flex flex-col md:col-span-full md:row-span-2 p-5 gap-6 justify-center items-center border-b border-black`}>
           <h2 className="w-full text-center text-wrap">Our members have worked at prominent startups and accelerators</h2>
           <div className="w-full">
             <div className="flex gap-8 px-4 md:px-8 justify-center">
@@ -124,9 +124,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`hidden md:block md:row-span-${section3rows} md:col-span-${sideCols} border-b border-black`}></div>
+        <div className={`hidden md:block md:row-span-4 md:col-span-3 border-b border-black`}></div>
         {/** The Core */}
-        <div className={`md:row-span-${section3rows} md:col-span-${mainCols} md:px-15 p-5 md:border-l md:border-r border-b border-black flex flex-col gap-8 items-center justify-center `}>
+        <div className={`md:row-span-4 md:col-[span_14] md:px-12 p-5 md:border-l md:border-r border-b border-black flex flex-col gap-8 items-center justify-center `}>
           <div className="w-full">
             <h1>The Core</h1>
             <p className="x1 ">Three things you can expect out of your time at Homebrew.</p>
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`hidden md:block md:row-span-${section3rows} md:col-span-${sideCols} border-b border-black`}></div>
+        <div className={`hidden md:block md:row-span-4 md:col-span-3 border-b border-black`}></div>
 
 
       </div>
@@ -154,7 +154,7 @@ export default function Home() {
       {/** Final CTA */}
       <div className="flex flex-col p-1 md:py-10 md:px-[5vw] p-5 gap-2 justify-center text-white bg-(--accent) border-t border-b border-black">
         <h1>Ready to get started?</h1>
-        <p>If you're hungry to make something awesome, we'd love to have you. We <Link href="/apply">recruit</Link> in all quarters.</p>
+        <p>If you're ready to make something awesome, we'd love to have you. We <Link href="/apply">recruit</Link> in all quarters.</p>
         <p>Any questions? Email acy@u.northwestern.edu.</p>
 
         <div>
