@@ -56,7 +56,7 @@ export default function Home() {
         {/** Hidden left side */}
         <div className={`hidden md:block md:row-span-4 md:col-span-3 border-b border-black`}></div>
         {/** Central hero */}
-        <div className={`md:row-span-4 md:col-[span_14] md:border-l md:border-r border-b border-black md:px-12 p-5 flex flex-col items-center justify-center`}>
+        <div className={`md:row-span-4 md:col-[span_14] md:border-l md:border-r border-b border-black md:px-15 p-5 flex flex-col items-center justify-center`}>
           <div className="flex flex-col gap-5">
             <h1 className="x0 text-wrap mt-8">
               Northwestern's home for ambitious builders.
@@ -83,7 +83,7 @@ export default function Home() {
 
         {/** Hidden left side */}
         <div className={`hidden md:block md:row-span-3 md:col-span-3 border-b border-black`}></div>
-        <div className={`md:row-span-3 md:col-[span_14] md:border-l md:border-r border-b border-black md:px-12 p-5 md:gap-3 flex flex-col items-center justify-center`}>
+        <div className={`md:row-span-3 md:col-[span_14] md:border-l md:border-r border-b border-black md:px-15 p-5 md:gap-3 flex flex-col items-center justify-center`}>
           <h1 className="w-full">What we do</h1>
           <p className="x1 mb-4 md:mb-5">
             Homebrew is a place for builders to commit to real progress and share it with others.
@@ -126,7 +126,7 @@ export default function Home() {
 
         <div className={`hidden md:block md:row-span-4 md:col-span-3 border-b border-black`}></div>
         {/** The Core */}
-        <div className={`md:row-span-4 md:col-[span_14] md:px-12 p-5 md:border-l md:border-r border-b border-black flex flex-col gap-8 items-center justify-center `}>
+        <div className={`md:row-span-4 md:col-[span_14] md:px-15 p-5 md:border-l md:border-r border-b border-black flex flex-col gap-8 items-center justify-center `}>
           <div className="w-full">
             <h1>The Core</h1>
             <p className="x1 ">Three things you can expect out of your time at Homebrew.</p>
