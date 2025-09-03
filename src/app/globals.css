@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Instrument Serif';
+  font-family: 'instrument-serif';
   src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -35,7 +35,7 @@
 }
 
 .x0 {
-  font-family: 'circular-std-book', serif;
+  font-family: 'instrument-serif', serif;
   font-size: 75px;
   line-height: 1;
 }
@@ -47,22 +47,22 @@
 
 
 h1 {
-  font-family: 'circular-std-book', serif;
+  font-family: 'instrument-serif', serif;
   font-size: 65px;
 }
 
 h2 {
-  font-family: 'circular-std-book', serif;
+  font-family: 'instrument-serif', serif;
   font-size: 42px;
 }
 
 h3 {
-  font-family: 'circular-std-book', serif;
+  font-family: 'instrument-serif', serif;
   font-size: 25px;
 }
 
 h4 {
-  font-family: 'circular-std-med', serif;
+  font-family: 'circular-std-book', serif;
   font-size: 22px;
 }
 

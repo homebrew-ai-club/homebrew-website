@@ -42,116 +42,117 @@ const memberLogos = [
 export default function Home() {
   const router = useRouter();
 
+  const mainCols = 14;
+  const sideCols = (20 - mainCols) / 2;
+
+  const section1rows = 4;
+  const section2rows = 3;
+  const carouselRows = 2;
+  const section3rows = 4;
 
   return (
     <div className="flex flex-col">
-      {/** Hero section */}
-      <div className="min-h-[90vh] w-full flex flex-col md:grid md:grid-cols-7 md:grid-rows-7 px-0">
-        {/* Upper Left - Main Title */}
-        <div className="flex-1 md:row-span-4 md:col-span-5 p-4 md:py-10 md:px-[5vw] border-r border-b border-black md:flex md:flex-col gap-5  justify-center">
-          <p className="x0 text-wrap">
-            Homebrew <Image
-              src="/logo/logo.svg"
-              alt="homebrew logo"
-              width={60}
-              height={60}
-              className="inline-block mx-0 align-middle"
-            /> is NU's community of builders.
-          </p>
-          <p className="x1 max-w-[1500px]">
-            Homebrew is the club for Northwestern students who build projects and startups. We provide community, guidance, and resources to help members build what they believe in.
-          </p>
-          <div>
-            <button className="py-3 px-5" onClick={() => router.push("/apply")}>
-              <p className="!text-[20px]">Apply</p>
-            </button>
-          </div>
-        </div>
-
-        {/* Upper Right - Empty (hidden on mobile) */}
-        <div className="hidden md:block md:row-span-4 md:col-span-2 md:p-12 border-b border-black flex items-center justify-center">
-        </div>
-
-
-        {/* Bottom Left - Description */}
-        <div className="flex flex-col  md:row-span-3 md:col-span-5 p-4 md:py-10 md:px-[5vw] border-r border-b border-black md:flex justify-center">
-          <div className="max-w-[1500px]">
-            <h2>What we do</h2>
-            <p className="x1 mb-4 md:mb-10">
-              Homebrew is a place for builders to commit to real progress and share it with others.
-              Through weekly <span className="medium">demo nights</span> and <span className="medium">build days</span>, you'll stay accountable, learn from your peers,
-              and create unforgettable experiences.
-            </p>
-            <h2>Who we are</h2>
+      <div className="min-h-[150vh] flex flex-col md:grid md:grid-cols-20 px-0">
+        {/** Hidden left side */}
+        <div className={`hidden md:block md:row-span-${section1rows} md:col-span-${sideCols} border-b border-black`}></div>
+        {/** Central hero */}
+        <div className={`md:row-span-${section1rows} md:col-span-${mainCols} md:border-l md:border-r border-b border-black md:px-15 p-5 flex flex-col items-center justify-center`}>
+          <div className="flex flex-col gap-5">
+            <h1 className="x0 text-wrap mt-8">
+              Northwestern's home for ambitious builders.
+            </h1>
             <p className="x1">
-              Homebrew is for anyone serious about building. Our community includes SWEs, MEs, designers, marketers, creators, and more. The only requirement is taking action. If that sounds like you, we'd love to have you.
+              Homebrew is the club for Northwestern students who build projects and startups. We provide community, guidance, and resources to help members build what they believe in.
             </p>
+            <div className="flex flex-row gap-8">
+              <div>
+                <button className="!border !border-black !bg-white !text-[#32231c] py-3 px-5" onClick={() => router.push("/projects")}>
+                  <p className="!text-[20px]">Our Projects</p>
+                </button>
+              </div>
+              <div>
+                <button className="py-3 px-5" onClick={() => router.push("/apply")}>
+                  <p className="!text-[20px]">Apply</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/** Hidden right side */}
+        <div className={`hidden md:block md:row-span-${section1rows} md:col-span-${sideCols} border-b border-black`}></div>
+
+        {/** Hidden left side */}
+        <div className={`hidden md:block md:row-span-${section2rows} md:col-span-${sideCols} border-b border-black`}></div>
+        <div className={`md:row-span-${section2rows} md:col-span-${mainCols} md:border-l md:border-r border-b border-black md:px-15 p-5 md:gap-3 flex flex-col items-center justify-center`}>
+          <h1 className="w-full">What we do</h1>
+          <p className="x1 mb-4 md:mb-5">
+            Homebrew is a place for builders to commit to real progress and share it with others.
+            Through weekly <span className="medium">demo nights</span> and <span className="medium">build days</span>, you'll stay accountable, learn from your peers,
+            and create unforgettable experiences.
+          </p>
+          <h1 className="w-full">Who we are</h1>
+          <p className="x1">
+            Homebrew is for anyone serious about building. Our community includes SWEs, MEs, designers, marketers, creators, and more. The only requirement is taking action. If that sounds like you, we'd love to have you.
+          </p>
+        </div>
+        {/** Hidden right side */}
+        <div className={`hidden md:block md:row-span-${section2rows} md:col-span-${sideCols} border-b border-black`}></div>
+
+        {/** Member Organizations Carousel */}
+        <div className={`flex flex-col md:col-span-20 md:row-span-${carouselRows} p-5 gap-6 justify-center items-center border-b border-black`}>
+          <h2 className="w-full text-center text-wrap">Our members have worked at prominent startups and accelerators</h2>
+          <div className="w-full">
+            <div className="flex gap-8 px-4 md:px-8 justify-center">
+              {memberLogos.map((logo, index) => (
+                <a
+                  key={index}
+                  href={logo.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 hover:opacity-75 transition-opacity duration-200"
+                >
+                  <Image
+                    src={logo.image}
+                    alt={`${logo.name} logo`}
+                    width={120}
+                    height={60}
+                    className="h-10 md:h-18 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-200"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom Right - Image */}
-        <div className="flex-1 md:row-span-3 md:col-span-2 md:border-b bg-gray-50 flex items-center justify-center">
-          <Image
-            src="/images/computer_in_field.png"
-            alt="computer in field"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-full object-cover"
-          />
+        <div className={`hidden md:block md:row-span-${section3rows} md:col-span-${sideCols} border-b border-black`}></div>
+        {/** The Core */}
+        <div className={`md:row-span-${section3rows} md:col-span-${mainCols} md:px-15 p-5 md:border-l md:border-r border-b border-black flex flex-col gap-8 items-center justify-center `}>
+          <div className="w-full">
+            <h1>The Core</h1>
+            <p className="x1 ">Three things you can expect out of your time at Homebrew.</p>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="p-4 border border-black">
+              <h3>Coworking Days</h3>
+              <p>Stay locked in with Homebrew's coworking days, where you can work on your latest creation together with other motivated members.</p>
+            </div>
+            <div className="p-4 border border-black">
+              <h3>Accountability and Support</h3>
+              <p>Every few weeks, members do a casual demo of their recent project(s), and get support and feedback from other members!</p>
+            </div>
+            <div className="p-4 border border-black">
+              <h3>Network</h3>
+              <p>Connect with Homebrew's powerful network of other ambitious students, VCs, and founders. We will make connections to the right people to support you.</p>
+            </div>
+          </div>
         </div>
-      </div>
+        <div className={`hidden md:block md:row-span-${section3rows} md:col-span-${sideCols} border-b border-black`}></div>
 
-      {/* Three benefits section */}
-      <div className="flex flex-col p-1 md:py-10 md:px-[5vw] gap-8 ">
-        <div>
-          <h1>The Core</h1>
-          <p className="x1 ">Three things you can expect out of your time at Homebrew.</p>
-        </div>
-        <div className="flex flex-col md:grid md:grid-rows-1 md:grid-cols-3 gap-4">
-          <div className="p-4 border border-black">
-            <h3>Coworking Days</h3>
-            <p>Stay locked in with Homebrew's coworking days, where you can work on your latest creation together with other motivated members.</p>
-          </div>
-          <div className="p-4 border border-black">
-            <h3>Accountability and Support</h3>
-            <p>Every few weeks, members do a casual demo of their recent project(s), and get support and feedback from other members!</p>
-          </div>
-          <div className="p-4 border border-black">
-            <h3>Network</h3>
-            <p>Connect with Homebrew's powerful network of other ambitious students, VCs, and founders. We will make connections to the right people to support you.</p>
-          </div>
-        </div>
-      </div>
 
-      {/** Member Organizations Carousel */}
-      <div className="flex flex-col p-1 md:py-10 md:px-[5vw] gap-6 justify-center items-start">
-        <h2 className="text-center">Our members have experience at prominent startups</h2>
-        <div className="overflow-x-auto">
-          <div className="flex gap-8 px-4 md:px-8">
-            {memberLogos.map((logo, index) => (
-              <a
-                key={index}
-                href={logo.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 hover:opacity-75 transition-opacity duration-200"
-              >
-                <Image
-                  src={logo.image}
-                  alt={`${logo.name} logo`}
-                  width={120}
-                  height={60}
-                  className="h-10 md:h-18 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-200"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/** Final CTA */}
-      <div className="flex flex-col p-1 md:py-10 md:px-[5vw] gap-2 justify-center text-white bg-(--accent) border-t border-b border-black">
+      <div className="flex flex-col p-1 md:py-10 md:px-[5vw] p-5 gap-2 justify-center text-white bg-(--accent) border-t border-b border-black">
         <h1>Ready to get started?</h1>
         <p>If you're hungry to make something awesome, we'd love to have you. We <Link href="/apply">recruit</Link> in all quarters.</p>
         <p>Any questions? Email acy@u.northwestern.edu.</p>
