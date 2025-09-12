@@ -43,10 +43,10 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col gap-10 w-[100vw]">
+    <div className="flex flex-col gap-10 w-[100vw] items-center">
       {/** Hero: text left, image right */}
-      <section className="flex md:flex-row flex-col gap-5">
-        <div className="md:px-[20vw] p-5 py-10 md:py-16 flex flex-col md:flex-row items-center gap-8">
+      <section className="max-w-[1600px] p-5 md:p-10 flex md:flex-row flex-col gap-5">
+        <div className=" flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-4/7 flex flex-col gap-5">
             <h1 className="x0 text-wrap mt-2">Northwestern's home for ambitious builders.</h1>
             <p className="x1">
@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/** Intro copy */}
-      <section className="flex flex-row gap-15 md:px-[20vw] items-center">
+      <section className="flex flex-row gap-15 p-5 md:p-10 max-w-[1600px] items-center">
         <div className="flex-1 w-3/7">
           <div className="relative w-full h-[260px] md:h-[420px] border border-black">
             <Image
@@ -109,10 +109,35 @@ export default function Home() {
         </section>
       </section>
 
+
+      {/** The Core */}
+      <section className="p-5 md:p-10 max-w-[1600px]">
+        <div className="mx-auto flex flex-col gap-8 items-center justify-center">
+          <div className="w-full">
+            <h1>The Core</h1>
+            <p className="x1 ">Three things you can expect out of your time at Homebrew.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+            <div className="p-4 border border-black">
+              <h3>Coworking Days</h3>
+              <p>Stay locked in with Homebrew's coworking days, where you can work on your latest creation together with other motivated members.</p>
+            </div>
+            <div className="p-4 border border-black">
+              <h3>Accountability and Support</h3>
+              <p>Every few weeks, members do a casual demo of their recent project(s), and get support and feedback from other members!</p>
+            </div>
+            <div className="p-4 border border-black">
+              <h3>Network</h3>
+              <p>Connect with Homebrew's powerful network of other ambitious students, VCs, and founders. We will make connections to the right people to support you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <hr />
       {/** Member Organizations Carousel */}
-      <section className="w-full">
-        <div className="mx-auto p-5 md:px-[20vw] flex flex-col gap-6 justify-center items-center">
+      <section className="w-full py-5">
+        <div className="mx-auto flex flex-col gap-6 justify-center items-center">
           <h2 className="w-full text-center text-wrap">Our members have worked at prominent startups and accelerators</h2>
           <div className="w-full overflow-x-auto">
             <div className="flex gap-8 px-4 md:px-8 justify-start md:justify-center min-w-max">
@@ -139,33 +164,9 @@ export default function Home() {
       </section>
       <hr />
 
-      {/** The Core */}
-      <section className="w-full">
-        <div className="mx-auto md:px-[20vw] p-5 flex flex-col gap-8 items-center justify-center">
-          <div className="w-full">
-            <h1>The Core</h1>
-            <p className="x1 ">Three things you can expect out of your time at Homebrew.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-            <div className="p-4 border border-black">
-              <h3>Coworking Days</h3>
-              <p>Stay locked in with Homebrew's coworking days, where you can work on your latest creation together with other motivated members.</p>
-            </div>
-            <div className="p-4 border border-black">
-              <h3>Accountability and Support</h3>
-              <p>Every few weeks, members do a casual demo of their recent project(s), and get support and feedback from other members!</p>
-            </div>
-            <div className="p-4 border border-black">
-              <h3>Network</h3>
-              <p>Connect with Homebrew's powerful network of other ambitious students, VCs, and founders. We will make connections to the right people to support you.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/** Final CTA */}
       <section className="w-full">
-        <div className="flex flex-col p-1 md:py-10 md:px-[20vw] p-5 gap-2 justify-center text-white bg-(--accent) border-t border-b border-black">
+        <div className="flex flex-col p-5 md:p-10 max-w-[1600px] justify-center text-white bg-(--accent) border-t border-b border-black">
           <h1>Ready to get started?</h1>
           <p>If you're ready to make something awesome, we'd love to have you. We <Link href="/apply">recruit</Link> in all quarters.</p>
           <p>Any questions? Email acy@u.northwestern.edu.</p>
